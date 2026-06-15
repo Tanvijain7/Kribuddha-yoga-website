@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #9b7653;
+    --primary-light: #c5a47e;
+    --text-dark: #444;
+    --footer-bg: #2b1b12;
+}
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: #fff;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 0;
+}
+.nav-container { 
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, buttons right */
+    align-items: center;
+    max-width: 1400px; /* Adjust to match your image width */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo-side { 
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex: 1;
+}
+.logo-side img { height: 50px; }
+.brand-name { font-weight: 600; color: var(--primary); font-size: 1.2rem; }
+.menu-toggle, .hamburger { 
+    display: none !important; 
+}
+.nav-links { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 2; 
+}
+.dropdown {
+    position: relative; /* This is the anchor for the dropdown box */
+}
+.nav-links a { text-decoration: none;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    transition: 0.3s; 
+    padding: 10px 5px; 
+}
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Sits exactly below 'Training' */
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* The shadow from your image */
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    color: #444;
+    padding: 10px 20px;
+    display: block; /* Makes them stack vertically */
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the box when hovering over 'Training' */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #9b7653;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); font-weight: 600; }
+
+.nav-btns { 
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    flex: 1; }
+.btn-trial, .btn-shop { 
+    background: #9b7653; /* The brown color from your image */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-shop {
+    background: #a68564; /* Slightly different shade for shop if you prefer */
+}
+
+    .menu-toggle, .hamburger {
+    display: none !important;
+}
+
+/* --- Program Hero --- */
+.program-hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.program-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                url('franchise.jpg') center/cover;
+    z-index: 1;
+}
+
+.floating-bg-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 15vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.program-hero-content { position: relative; z-index: 3; text-align: center; color: #fff; }
+.program-hero-content h1 { font-size: 52px; margin-bottom: 10px; }
+
+.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 4; }
+.hero-wave svg { width: 100%; height: 100px; fill: #fff; }
+
+/* --- Franchise Enquiry Form Styles --- */
+.enquiry-section {
+    padding: 80px 0;
+    background-color: #f9f9f9; /* Light grey background to make the white card pop */
+}
+
+.enquiry-card {
+    background: #ffffff;
+    max-width: 700px; /* Centered narrow card layout */
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08); /* Soft depth shadow */
+    text-align: center;
+}
+
+.enquiry-card h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sub-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.sub-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.enquiry-form input, 
+.enquiry-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.enquiry-form input:focus, 
+.enquiry-form textarea:focus {
+    border-color: #9b7653; /* Changes to brand brown on click */
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.btn-whatsapp {
+    background-color: #9b7653; /* Your brand brown */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #826345;
+}
+
+.btn-reset {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-reset:hover {
+    background-color: #f5f5f5;
+}
+
+/* Disclaimer text */
+.disclaimer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .enquiry-card {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    .form-buttons {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+/* --- Franchise Benefits Section --- */
+.franchise-benefits {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+.container {
+    max-width: 1400px; /* Increased from 1200px */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.container h2 {
+    font-size: 32px;
+    color: #9b7653; /* Your brand brown */
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 180px;
+    height: 6px;
+    background-color: #e0c9b0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.benefit-card {
+    background: #ffffff;
+    padding: 60px 40px;
+    
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    font-size: 30px;
+    color: #9b7653; /* Your signature brown */
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 21px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.benefit-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Single column on phones */
+    }
+}
+
+
+/* --- Our Philosophy Section --- */
+.philosophy-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.philosophy-grid {
+    display: flex;
+    align-items: center; /* Vertically centers the text against the image */
+    gap: 60px; /* Space between image and text */
+}
+
+.philosophy-image {
+    flex: 1; /* Takes up half the space */
+}
+
+.philosophy-image img {
+    width: 100%;
+    border-radius: 12px; /* Soft rounded corners from screenshot */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deep soft shadow */
+    display: block;
+}
+
+.philosophy-content {
+    flex: 1; /* Takes up the other half */
+    text-align: left;
+}
+
+.philosophy-content h2 {
+    font-size: 32px;
+    color: #9b7653; /* Your brand brown */
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Reusing your signature underline style */
+.philosophy-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #e0c9b0;
+}
+
+.philosophy-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 300; /* Clean, light weight text */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 992px) {
+    .philosophy-grid {
+        flex-direction: column; /* Stack image on top of text */
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .philosophy-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.partner { 
+    padding: 80px 0; 
+    background-color: #fdfaf7; /* Matching light cream background */
+    text-align: center; 
+}
+
+/* Heading with the signature tan underline */
+.partner h2.section-title {
+    color: #9b7653; 
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    display: inline-block;
+    border-bottom: 2px solid #9b7653; 
+    padding-bottom: 8px;
+}
+
+.partner-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px; 
+    margin-bottom: 50px; 
+}
+
+.partner-card { 
+    background: #fff; 
+    padding: 45px 25px; 
+    border-radius: 12px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow like reference */
+}
+
+.partner-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+}
+
+/* Tan icons from your original image */
+.partner-card .icon { 
+    font-size: 3rem; 
+    color: #9b7653; 
+    margin-bottom: 20px; 
+}
+
+.partner-card h3 {
+    color: #9b7653;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.partner-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+.footer { background: #3a2e25; color: #fff; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+
+.footer-logo-container { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.footer-logo-container img { height: 50px; width: 50px; background: #fff; border-radius: 50%; padding: 5px; }
+.footer-logo-container h3 { color: var(--primary-light); font-size: 1.5rem; }
+
+.footer-col h4 { margin-bottom: 25px; font-size: 16px; letter-spacing: 1px; color: #fff; }
+.footer-col ul { list-style: none !important; padding: 0; }
+.footer-col ul li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #ddd; font-size: 14px; }
+.footer-col ul li i { color: var(--primary-light); width: 20px; text-align: center; }
+
+.contact-col p { display: flex; gap: 10px; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
+.contact-col i { color: var(--primary-light); margin-top: 5px; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { font-size: 18px; cursor: pointer; transition: 0.3s; }
+.social-icons i:hover { color: var(--primary-light); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 30px; text-align: center; color: #999; font-size: 13px; }
+.footer-bottom a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+@media (max-width: 992px) {
+    /* Hide the desktop nav links and buttons initially */
+    .nav-links, .nav-btns {
+        display: none; 
+    }
+
+    /* Show the Hamburger (You'll need to add a button with class 'hamburger' to your HTML) */
+    .hamburger {
+        display: block !important;
+        font-size: 24px;
+        cursor: pointer;
+        color: #9b7653;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    .program-hero {
+        height: 60vh; /* Shorter hero for mobile */
+    }
+
+    .program-hero-content h1 {
+        font-size: 32px; /* Smaller, readable title */
+        padding: 0 15px;
+    }
+
+    .floating-bg-text {
+        font-size: 20vw; /* Scale the background text appropriately */
+    }
+    
+    .hero-wave svg {
+        height: 50px; /* Smaller wave so it doesn't cover content */
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 0 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack everything in one column */
+        gap: 30px;
+        text-align: center; /* Center text for easier reading on phones */
+    }
+
+    .footer-logo-container, 
+    .social-icons, 
+    .footer-col ul li {
+        justify-content: center; /* Align items to center in the stack */
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

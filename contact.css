@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #9b7653;
+    --primary-light: #c5a47e;
+    --text-dark: #444;
+    --footer-bg: #2b1b12;
+}
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    
+    background: #fff;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+.nav-container { 
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, buttons right */
+    align-items: center;
+    max-width: 1400px; /* Adjust to match your image width */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo-side { 
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex: 1;
+}
+.logo-side img { height: 50px; }
+.brand-name { font-weight: 600; color: var(--primary); font-size: 1.2rem; }
+.menu-toggle, .hamburger { 
+    display: none !important; 
+}
+.nav-links { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 2; 
+}
+.dropdown {
+    position: relative; /* This is the anchor for the dropdown box */
+}
+.nav-links a { text-decoration: none;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    transition: 0.3s; 
+    padding: 10px 5px; 
+}
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Sits exactly below 'Training' */
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* The shadow from your image */
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    color: #444;
+    padding: 10px 20px;
+    display: block; /* Makes them stack vertically */
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the box when hovering over 'Training' */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #9b7653;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); font-weight: 600; }
+
+.nav-btns { 
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    flex: 1; }
+.btn-trial, .btn-shop { 
+    background: #9b7653; /* The brown color from your image */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-shop {
+    background: #a68564; /* Slightly different shade for shop if you prefer */
+}
+
+    .menu-toggle, .hamburger {
+    display: none !important;
+}
+/* --- Program Hero --- */
+.program-hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.program-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                url('contactus.jpg') center/cover;
+    z-index: 1;
+}
+
+.floating-bg-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 15vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.program-hero-content { position: relative; z-index: 3; text-align: center; color: #fff; }
+.program-hero-content h1 { font-size: 52px; margin-bottom: 10px; }
+
+.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 4; }
+.hero-wave svg { width: 100%; height: 100px; fill: #fff; }
+
+
+/* --- Contact Section Styles --- */
+.contact-form-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-align {
+    text-align: center;
+    align-items: center;
+}
+
+/* Typography matching screenshot */
+.sub-heading {
+    font-family: 'Georgia', serif; /* Or a cursive font if you have one */
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.section-title-underlined {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-underlined::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-light);
+}
+
+.center-align .section-title-underlined::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #fafafa;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-whatsapp-send {
+    background: #b08d6a; /* Muted brown */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-reset {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Info Items (Middle Column) */
+.help-text {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 18px;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+.info-item a{
+    color:var(--primary);
+    cursor: pointer;
+}
+
+.info-item p {
+    color: var(--primary);
+    font-size: 14px;
+    
+}
+
+/* QR Code Section */
+.qr-container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.qr-container img {
+    max-width: 180px;
+    height: auto;
+}
+
+.qr-text {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+.footer { background: #3a2e25; color: #fff; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+
+.footer-logo-container { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.footer-logo-container img { height: 50px; width: 50px; background: #fff; border-radius: 50%; padding: 5px; }
+.footer-logo-container h3 { color: var(--primary-light); font-size: 1.5rem; }
+
+.footer-col h4 { margin-bottom: 25px; font-size: 16px; letter-spacing: 1px; color: #fff; }
+.footer-col ul { list-style: none !important; padding: 0; }
+.footer-col ul li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #ddd; font-size: 14px; }
+.footer-col ul li i { color: var(--primary-light); width: 20px; text-align: center; }
+
+.contact-col p { display: flex; gap: 10px; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
+.contact-col i { color: var(--primary-light); margin-top: 5px; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { font-size: 18px; cursor: pointer; transition: 0.3s; }
+.social-icons i:hover { color: var(--primary-light); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 30px; text-align: center; color: #999; font-size: 13px; }
+.footer-bottom a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+
+.map-section {
+    width: 100%;
+    line-height: 0;
+    margin-top: 2px;
+    padding: 0; /* Ensures no internal spacing */
+}
+
+.map-section iframe {
+    width: 100%; /* Forces the iframe to take all available horizontal space */
+    display: block; /* Removes any inline-block spacing at the bottom */
+    filter: grayscale(0.2) contrast(1.1);
+}
+
+
+@media (max-width: 992px) {
+    /* Hide the desktop nav links and buttons initially */
+    .nav-links, .nav-btns {
+        display: none; 
+    }
+
+    /* Show the Hamburger (You'll need to add a button with class 'hamburger' to your HTML) */
+    .hamburger {
+        display: block !important;
+        font-size: 24px;
+        cursor: pointer;
+        color: #9b7653;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    .program-hero {
+        height: 60vh; /* Shorter hero for mobile */
+    }
+
+    .program-hero-content h1 {
+        font-size: 32px; /* Smaller, readable title */
+        padding: 0 15px;
+    }
+
+    .floating-bg-text {
+        font-size: 20vw; /* Scale the background text appropriately */
+    }
+    
+    .hero-wave svg {
+        height: 50px; /* Smaller wave so it doesn't cover content */
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 0 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack everything in one column */
+        gap: 30px;
+        text-align: center; /* Center text for easier reading on phones */
+    }
+
+    .footer-logo-container, 
+    .social-icons, 
+    .footer-col ul li {
+        justify-content: center; /* Align items to center in the stack */
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+   
+

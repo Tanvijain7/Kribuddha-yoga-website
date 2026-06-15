@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #9b7653;
+    --primary-light: #c5a47e;
+    --text-dark: #444;
+    --footer-bg: #2b1b12;
+}
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: #fff;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 0;
+}
+.nav-container { 
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, buttons right */
+    align-items: center;
+    max-width: 1400px; /* Adjust to match your image width */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo-side { 
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex: 1;
+}
+.logo-side img { height: 50px; }
+.brand-name { font-weight: 600; color: var(--primary); font-size: 1.2rem; }
+.menu-toggle, .hamburger { 
+    display: none !important; 
+}
+.nav-links { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 2; 
+}
+.dropdown {
+    position: relative; /* This is the anchor for the dropdown box */
+}
+.nav-links a { text-decoration: none;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    transition: 0.3s; 
+    padding: 10px 5px; 
+}
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Sits exactly below 'Training' */
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* The shadow from your image */
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    color: #444;
+    padding: 10px 20px;
+    display: block; /* Makes them stack vertically */
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the box when hovering over 'Training' */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #9b7653;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); font-weight: 600; }
+
+.nav-btns { 
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    flex: 1; }
+.btn-trial, .btn-shop { 
+    background: #9b7653; /* The brown color from your image */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-shop {
+    background: #a68564; /* Slightly different shade for shop if you prefer */
+}
+
+    .menu-toggle, .hamburger {
+    display: none !important;
+}
+
+/* --- Program Hero --- */
+.program-hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.program-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2), rgba(0,0,0,0.6)), 
+                url('teacher.jpg') center/cover;
+    z-index: 0;
+}
+
+.floating-bg-text {
+   position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: 'Times New Roman',  serif;
+    font-size: 14vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform:translate(-50%, -50%); }
+    50% { transform: translate(-50%, -65%); }
+}
+
+.program-hero-content { position: relative; z-index: 2; text-align: center; color: #fff; }
+.program-hero-content h1 { font-size: 52px; margin-bottom: 10px; font-weight: 700; }
+
+.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 4; }
+.hero-wave svg { width: 100%; height: 130px; fill: #fff; }
+ 
+/* --- Teacher Profiles Section --- */
+/* --- Section 1: Teacher Grid --- */
+.teacher-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.teacher-section h2 {
+    font-size: 28px;
+    margin:0px 0px 8px;
+    color:#a67c52;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.teacher-section p{
+    color:#212529bf;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px 0px 16px;
+    font-size: 16px;
+}
+
+.teacher-grid {
+    display: flex;
+    flex-direction: row; /* Aligns cards horizontally */
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    flex-wrap: nowrap; /* Allows wrapping on smaller screens */
+}
+
+.teacher-card {
+    flex: 1;
+   
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soft shadow like the image */
+    
+}
+
+.teacher-card img {
+    width: 100%;
+    height: auto; /* High-aspect ratio for portraits */
+    
+    border-radius: 8px;
+}
+
+.teacher-card h3 {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 4px 0px;
+    color: #a67c52;
+    margin: 15px 0 10px;
+}
+
+.teacher-card p {
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#212529bf;
+    line-height: 1.6;
+    margin: 8px 0 0;
+}
+
+.cert-btn {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#6c757d;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0 0;
+}
+
+/* --- Section 2: Testimonial & Scrollable Gallery --- */
+.testimonial-section {
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+}
+
+.testimonial-header {
+    display: flex; /* Keeps bio left, scroll right */
+    gap: 40px;
+    padding: 40px;
+    align-items: flex-start;
+}
+
+.bio {
+    flex: 0 0 320px; /* Fixed width for the text area */
+}
+
+.bio h2 {
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:0 0 16px;
+    color:#a67c52;
+    line-height: 1.3;
+}
+.bio p{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#212529;
+    margin: 0 0 4px;
+}
+
+/* Shashi's Portrait Image */
+.shashi-profile-img img {
+    width: 180px;
+    
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.summary-text {
+    font-size: 16px;
+    color: #212529bf;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    margin: 8px 0px 16px;
+}
+
+.view-all {
+    padding: 8px 12px;
+    font-size: 16px;
+    color:#6c757d;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid #333;
+    background: #fff;
+    cursor: pointer;
+    margin-top: 22px;
+}
+
+/* --- The Magic Horizontal Scroll --- */
+.scroll-container {
+    flex: 1; /* Takes remaining width */
+    overflow-x: auto; /* Enables horizontal scrollbar */
+    padding-bottom: 20px;
+    gap:12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+      
+}
+
+.image-track {
+    display: flex; /* Forces all 13 images into a single row */
+    gap: 15px;
+}
+
+.image-track img {
+    height: 320px; /* Uniform height for screenshots */
+    width: auto;
+    border-radius: 8px;
+    flex-shrink: 0; /* Important: prevents images from squishing */
+    
+}
+
+/* --- Custom Scrollbar for better UI --- */
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+    
+}
+.scroll-container::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #b19369;
+    border-radius: 4px;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+    .testimonial-header {
+        flex-direction: column; /* Stacks vertically on tablets/phones */
+    }
+    .bio {
+        width: 100%;
+        flex: none;
+    }
+}
+
+.footer { background: #3a2e25; color: #fff; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+
+.footer-logo-container { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.footer-logo-container img { height: 50px; width: 50px; background: #fff; border-radius: 50%; padding: 5px; }
+.footer-logo-container h3 { color: var(--primary-light); font-size: 1.5rem; }
+
+.footer-col h4 { margin-bottom: 25px; font-size: 16px; letter-spacing: 1px; color: #fff; }
+.footer-col ul { list-style: none !important; padding: 0; }
+.footer-col ul li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #ddd; font-size: 14px; }
+.footer-col ul li i { color: var(--primary-light); width: 20px; text-align: center; }
+
+.contact-col p { display: flex; gap: 10px; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
+.contact-col i { color: var(--primary-light); margin-top: 5px; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { font-size: 18px; cursor: pointer; transition: 0.3s; }
+.social-icons i:hover { color: var(--primary-light); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 30px; text-align: center; color: #999; font-size: 13px; }
+.footer-bottom a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+/* --- FULL RESPONSIVE FIX --- */
+
+@media (max-width: 992px) {
+    /* 1. Show Hamburger & Hide Checkbox */
+    .hamburger {
+        display: block !important;
+        font-size: 26px;
+        color: #9b7653;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* 2. Mobile Menu Overlay (Solid white background) */
+    .nav-links {
+        display: none; 
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 70px; /* Adjust to match header height */
+        left: 0;
+        width: 100% !important;
+        height: calc(100vh - 70px);
+        background: #ffffff !important;
+        z-index: 9999 !important;
+        padding: 20px 0 !important;
+        overflow-y: auto;
+    }
+
+    /* Show menu when checkbox is clicked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex !important;
+    }
+
+    /* 3. Links & Buttons in Mobile Menu */
+    .nav-links a {
+        width: 100% !important;
+        padding: 15px 25px !important;
+        border-bottom: 1px solid #f5f5f5;
+        justify-content: flex-start !important;
+    }
+
+    .nav-btns {
+        flex-direction: column !important;
+        padding: 20px !important;
+        width: 100% !important;
+    }
+
+    .btn-trial, .btn-shop {
+        width: 100% !important;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    /* 4. Dropdown fix for Mobile */
+    .dropdown-content {
+        position: static !important;
+        display: block !important;
+        box-shadow: none !important;
+        background: #fdfaf7;
+        padding-left: 40px !important;
+    }
+
+    /* 5. Teacher Grid (Stack to 1 column) */
+    .teacher-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .teacher-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* 6. Testimonial Section Fix */
+    .testimonial-header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .bio {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .shashi-profile-img img {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 7. Hero Section Adjustments */
+    .program-hero {
+        height: 55vh;
+    }
+
+    .program-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .floating-bg-text {
+        font-size: 22vw;
+    }
+
+    .hero-wave svg {
+        height: 50px;
+    }
+
+    /* 8. Footer Fix */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo-container, .social-icons, .footer-col ul li {
+        justify-content: center;
+    }
+}

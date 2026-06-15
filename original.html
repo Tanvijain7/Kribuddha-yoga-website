@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kribuddha Wellness - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdfbf7;
+      color: #333;
+    }
+
+    .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+
+    /* Hero CTA hover effect */
+    .btn-gold {
+      background-color: #a67c52;
+      border-radius: 50px;
+      padding: 12px 32px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-gold:hover {
+      background-color: #8c6239;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-section {
+      background: url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg') center/cover no-repeat;
+      color: #333;
+      position: relative;
+      padding: 100px 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(253, 251, 247, 0.7);
+      /* soft overlay for readability */
+      z-index: 1;
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-section a.btn:hover {
+      background-color: #8c6239 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .waves {
+      width: 100% !important;
+      height: auto;
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #a67c52;
+      margin-bottom: 15px;
+    }
+
+    .card h5 {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    /* ✅ Images auto adjust */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ✅ Hero section responsive */
+    .hero-section {
+      padding: 60px 15px;
+      text-align: center;
+      
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .hero-section h4 {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: 100px 20px;
+      }
+
+      .hero-section h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-section h4 {
+        font-size: 1.6rem;
+      }
+    }
+
+    .about-section .row {
+  --bs-gutter-x: 0.5;  /* remove horizontal gutter */
+}
+    /* ✅ About section */
+  
+.about-img-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.about-img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.about-img:hover {
+  transform: scale(1.04);
+}
+
+.about-content {
+  background: #ffffffcc; /* soft translucent box */
+  backdrop-filter: blur(6px);
+}
+
+ .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+
+.btn-gradient {
+  background: linear-gradient(45deg, #c49b66, #8b5e3c);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #8b5e3c, #c49b66);
+}
+
+    @media (max-width: 768px) {
+  .about-img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    max-height: 250px;
+  }
+}
+
+    /* ✅ Cards responsive (Services) */
+    .card {
+      height: 100%;
+    }
+
+    /* ✅ Newsletter form responsive */
+    #subscribeForm .form-control {
+      width: 100%;
+    }
+
+    #subscribeForm button {
+      width: 100%;
+    }
+
+    @media (max-width: 576px) {
+
+      #subscribeForm .col-md-3,
+      #subscribeForm .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kribuddha Wellness</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfbf7;
+        }
+
+        .navbar-brand span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .nav-link:hover {
+            color: #a67c52 !important;
+        }
+
+        /* Default: show icons */
+        .nav-link i {
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        /* Hide icons on medium screens ≤1199px */
+        @media (max-width: 1199px) {
+            .nav-link i {
+                display: none;
+            }
+        }
+
+        /* Tablet / Small screens ≤991px: stacked links */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .navbar .btn {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0 0 0;
+            }
+        }
+
+        /* Mobile screens ≤575px: smaller font */
+        @media (max-width: 575px) {
+            .navbar-brand span {
+                font-size: 1rem;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color:#fdfbf7;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://kribuddha.in/Logo.jpg" alt="Kribuddha Logo" width="55" class="me-2">
+                <span class="fw-bold" style="color:#a67c52;">Kribuddha Wellness</span>
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in"><i class="bi bi-house-door"></i>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in/about"><i class="bi bi-person-heart"></i>
+                            About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in/services"  ><i class="bi bi-yin-yang"></i> Our
+                            Programs</a>
+                    </li>
+                    <!-- ADD DROPDOWN HERE -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-mortarboard"></i> Training
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
+                            <li><a class="dropdown-item" href="https://kribuddha.in/yogateachertraining"  >Yoga Instructor Course</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://kribuddha.in/teacherdetails"  >Teacher Details</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in/pricing"  ><i class="bi bi-cash-stack"></i> Plans
+                            &
+                            Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in/blog" ><i class="bi bi-journal-text"></i>
+                            Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in/franchise" ><i class="bi bi-globe"></i>
+                            Franchise</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="https://kribuddha.in/contact"  ><i class="bi bi-telephone"></i>
+                            Contact</a></li>
+
+                    <li class="nav-item">
+                        <a class="btn text-white px-3 ms-lg-2" style="background-color:#a67c52;"
+                            href="https://kribuddha.in/freetrial">
+                            <i class="bi bi-stars"></i> Start Trial Plan
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn text-white px-3 ms-lg-2" style="background-color:#a67c52;" href="https://kribuddha.in/shop">
+                            <i class="bi bi-bag"></i> Shop
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+  <!-- Hero Section -->
+  <section class="hero-section py-5 text-center position-relative overflow-hidden" data-aos="fade-in">
+    <div class="container position-relative" style="z-index:2;">
+      <!-- Logo -->
+      <img src="https://kribuddha.in/Logo.jpg" alt="Kribuddha Logo" width="180" class="mb-3 rounded-circle border"
+        style="border-color:#a67c52;" data-aos="zoom-in">
+
+      <!-- Brand Name -->
+      <h1 class="fw-bold mb-2" style="color:#a67c52;" data-aos="fade-up">Kribuddha Wellness Center</h1>
+
+      <!-- Tagline -->
+      <h4 class="fst-italic mb-3" style="color:#444; font-size:1.6rem;" data-aos="fade-up" data-aos-delay="200">
+        “Boundless Inner Peace.”
+      </h4>
+
+      <!-- Slogan -->
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="400">
+        <strong>Yoga Anytime, Anywhere</strong> — Bringing Ancient Wisdom into Busy Modern Lives.
+      </p>
+
+      <!-- Social Proof -->
+      <p class="fw-semibold mb-4" style="color:#555;" data-aos="fade-up" data-aos-delay="500">
+        Trusted by 100+ students | Online & Offline Yoga Classes
+      </p>
+
+      <!-- CTA -->
+      <a href="https://kribuddha.in/about" class="btn btn-lg text-white rounded-pill shadow px-4 py-2"
+        style="background-color:#a67c52; transition: all 0.3s ease;" data-aos="zoom-in" data-aos-delay="700">
+        Discover More
+      </a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Waves Background -->
+    <div class="position-absolute bottom-0 start-0 w-100">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+        <path fill="#fdfbf7" fill-opacity="1">
+          <animate attributeName="d" dur="10s" repeatCount="indefinite" values="
+            M0,96L48,80C96,64,192,32,288,26.7C384,21,480,43,576,80C672,117,768,171,864,181.3C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L0,320Z;
+            M0,64L48,74.7C96,85,192,107,288,112C384,117,480,107,576,90.7C672,75,768,53,864,64C960,75,1056,117,1152,122.7C1248,128,1344,96,1392,80L1440,64L1440,320L0,320Z;
+            M0,96L48,80C96,64,192,32,288,26.7C384,21,480,43,576,80C672,117,768,171,864,181.3C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L0,320Z
+          "></animate>
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <style>
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 150px;
+    }
+
+    .wave-container {
+      z-index: 1;
+    }
+  </style>
+
+
+
+
+  <!-- About Preview -->
+ <section class="py-5 about-section">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+
+      <!-- Left side: Image -->
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+        <div class="about-img-wrapper">
+          <img src="https://kribuddha.in/about-info.jpg" alt="Kribuddha Wellness"
+               class="about-img rounded-4 shadow-lg">
+        </div>
+      </div>
+
+      <!-- Right side: Text -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="about-content p-4 p-md-5">
+          <h2 class="section-title mb-4">About Us</h2>
+          <p class="lead text-muted mb-4">
+            At <strong>Kribuddha Wellness Center</strong>, we believe true luxury is a 
+            life free from stress, pain & imbalance. Our philosophy blends 
+            <em>Yoga, Meditation & Mindfulness</em> with a premium holistic touch.
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="bi bi-leaf me-2" style="color:#a67c52;" ></i> A premium sanctuary of wellness, balance & strength
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-person-heart me-2" style="color:#a67c52;"></i> Personalized consultations
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-people me-2" style="color:#a67c52;"></i> Group & team yoga sessions
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-sunrise me-2" style="color:#a67c52;"></i> Healing retreats & workshops
+            </li>
+          </ul>
+
+          <a href=https://kribuddha.in/about 
+             class="btn btn-gradient rounded-pill px-4 py-2 mt-2 shadow-sm text-white" 
+             data-aos="zoom-in">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services Highlights -->
+  <section class="py-5" style="background-color:#f8f4ef;" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-flower1 fs-1" style="color:#a67c52;"></i>
+              <h5 class="mt-3">Yoga Sessions</h5>
+              <p>Daily classes for strength, flexibility & balance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-brightness-alt-high fs-1" style="color:#a67c52;"></i>
+              <h5 class="mt-3">Meditation</h5>
+              <p>Guided meditation for stress relief & inner peace.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-people fs-1" style="color:#a67c52;"></i>
+              <h5 class="mt-3">Workshops</h5>
+              <p>Special wellness workshops & corporate yoga.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-tree fs-1" style="color:#a67c52;"></i>
+              <h5 class="mt-3">Retreats</h5>
+              <p>Weekend retreats to reconnect with nature.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="https://kribuddha.in/services" class="btn btn-outline-dark mt-4" data-aos="fade-up">View All Services</a>
+    </div>
+  </section>
+
+  <!-- Pricing Teaser -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title">Affordable Plans</h2>
+      <p class="mb-4">Start your wellness journey today at a minimal cost.</p>
+      <h5 class="fw-bold">Standard Plan</h5>
+      <p class="fs-4">₹999 / month</p>
+      <p>Unlimited Yoga & Meditation Classes</p>
+      <a href="https://kribuddha.in/pricing" class="btn text-white" style="background-color:#a67c52;">See Pricing</a>
+    </div>
+  </section>
+
+  <!-- Testimonial / Quote -->
+  <section class="py-5" style="background-color:#f8f4ef;" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title">What Our Members Say</h2>
+      <blockquote class="blockquote" data-aos="fade-up" data-aos-delay="200">
+        <p>"Joining Kribuddha has been a life-changing experience. I feel calmer, healthier, and more focused."</p>
+        <br />
+        <footer class="blockquote-footer" style="color: #8c6239;"><i>Anita Sharma</i></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-5 text-center">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title fw-bold mb-3" style="color:#a67c52;">Join Our Wellness Insider</h2>
+      <p class="text-muted mb-4">Get tips, updates & offers directly in your WhatsApp.</p>
+
+      <form id="subscribeForm" class="row justify-content-center g-2">
+        <div class="col-md-3 col-10">
+          <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="col-md-2 col-10">
+          <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer - Kribuddha Wellness</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    footer a {
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e0c097 !important;
+      text-decoration: underline !important;
+    }
+
+    footer h5,
+    footer h6 {
+      color: #e0c097 !important;
+      letter-spacing: 0.5px;
+    }
+
+    footer p,
+    footer li,
+    footer div {
+      line-height: 1.7;
+    }
+
+    .footer-icon {
+      color: #e0c097;
+      margin-right: 8px;
+      width: 20px;
+      /* icons same width */
+      text-align: center;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive Alignment Fix */
+    .footer-col {
+      text-align: center;
+      /* default for small screens */
+    }
+
+    .footer-col ul {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .footer-about p {
+      
+      padding: 0 18px;
+    }
+
+    /* Small screen (max-width: 767px) me Quick Links aur Services ek row me */
+    @media (max-width: 767px) {
+      .footer-col {
+        text-align: center !important;
+      }
+
+      /* Quick Links aur Services side-by-side */
+      .footer-col:nth-child(2),
+      .footer-col:nth-child(3) {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        text-align: left !important;
+      }
+
+      /* About + Contact full width & center */
+      .footer-col:nth-child(1),
+      .footer-col:nth-child(4) {
+        width: 100%;
+        display: block;
+        text-align: center !important;
+      }
+    }
+
+
+    @media (min-width: 768px) {
+      .footer-col {
+        text-align: left;
+        /* medium screen se left align */
+      }
+
+      .footer-col ul {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Footer Start -->
+  <footer style="background-color:#3a2e25; color:#fdfbf7;">
+    <div class="container p-4">
+      <div class="row">
+
+        <!-- About -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0 footer-col footer-about">
+          <a class="navbar-brand d-flex align-items-center fw-semibold" href="index.html">
+            <img src="/public/Logo.jpg" alt="Kribuddha Logo" width="30" class="me-2 ms-3 " style="border-radius: 50%;">
+            <span style="color:#e0c097">Kribuddha Wellness</span>
+          </a>
+          <p>
+            Kribuddha Wellness is a holistic Yoga & Wellness Center dedicated to balancing mind, body, and soul
+            guided by certified yoga instructor <strong>Reetu Varma</strong>.
+          </p>
+          <!-- Social icons -->
+          <div class=" my-2 d-flex justify-content-center" style="font-size: 18px;">
+            <a href="https://www.instagram.com/kribuddhawellnesscenter" class="text-light me-4" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1BChPsgzSY/" class="text-light me-4" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/@KribuddhaWellness" class="text-light me-4" target="_blank">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://wa.me/917777001185" class="text-light" target="_blank">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4 mt-2 mb-md-0 footer-col">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="https://kribuddha.in/about" class="text-light text-decoration-none"><i
+                  class="bi bi-info-circle footer-icon"></i> About</a></li>
+            <li><a href="https://kribuddha.in/services" class="text-light text-decoration-none"><i
+                  class="bi bi-person-bounding-box footer-icon"></i> Services</a></li>
+            <li><a href=https://kribuddha.in/pricing class="text-light text-decoration-none"><i
+                  class="bi bi-cash-coin footer-icon"></i> Pricing</a></li>
+            <li><a href="https://kribuddha.in/contact" class="text-light text-decoration-none"><i
+                  class="bi bi-envelope footer-icon"></i> Contact</a></li>
+            <li><a href="https://kribuddha.in/services" class="text-light text-decoration-none"><i
+                  class="bi bi-bag footer-icon"></i> Shop</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 mb-4 mt-2 mb-md-0 footer-col">
+          <h6 class="text-uppercase fw-bold">Services</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a class="text-light text-decoration-none"><i class="bi bi-brilliance footer-icon"></i> Yoga
+                Sessions</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-flower2 footer-icon"></i> Meditation</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-stars footer-icon"></i>Retreats</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-journal-text footer-icon"></i> Workshops</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6 mb-4 mt-2 mb-md-0 footer-col">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <div class="mb-3">
+            <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br>
+            <a href="https://maps.google.com/?q=Room+No:308,+Aishwarya+Heaven,+Usarli+Khurd,+Navi+Mumbai+410221"
+              target="_blank" class="text-light text-decoration-none">
+              Room No:308, Aishwarya Heaven, Usarli Khurd, Navi Mumbai – 410221
+            </a>
+          </div>
+          <div class="mb-3">
+            <i class="bi bi-telephone-fill me-2"></i> <strong>Phone:</strong>
+            <a href="tel:+917777001185" class="text-light text-decoration-none"><br /> 7777001185</a>
+          </div>
+          <div class="mb-3">
+            <i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong>
+            <a href="mailto:kribuddhawellnesscenter@gmail.com" class="text-light text-decoration-none">
+              kribuddhawellnesscenter@gmail.com
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color:#2a211b; color:#aaa;">
+      © 2025 Kribuddha Wellness | All Rights Reserved <br>
+      <a href="/layout/privacy-policy.html" class="text-decoration-none" style="color:#e0c097;">Privacy Policy</a> |
+      <a href="/layout/terms.html" class="text-decoration-none" style="color:#e0c097;">Terms & Conditions</a>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+  <script>
+    document.getElementById("subscribeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = document.getElementById("nameInput").value;
+      let phone = "7777001185"; // WhatsApp number
+
+      let message = `New Subscription Request:\nName: ${name}`;
+      let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      window.open(url, "_blank");
+    });
+  </script>
+
+ 
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+ 
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+</body>
+
+</html>

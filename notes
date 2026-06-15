@@ -1,0 +1,102 @@
+/* <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col info">
+                <div class="footer-logo-container">
+                    <img src="hero.jpg" alt="Logo">
+                    <h3>Kribuddha</h3>
+                </div>
+                <p>Kribuddha Wellness is a holistic Yoga & Wellness Center dedicated to balancing mind, body, and soul guided by certified yoga instructor <b>Reetu Varma</b>.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><i class="fa-solid fa-circle-info"></i> About</li>
+                    <li><i class="fa-solid fa-leaf"></i> Services</li>
+                    <li><i class="fa-solid fa-indian-rupee-sign"></i> Pricing</li>
+                    <li><i class="fa-solid fa-envelope"></i> Contact</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i> Shop</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i> Yoga Sessions</li>
+                    <li><i class="fa-solid fa-om"></i> Meditation</li>
+                    <li><i class="fa-solid fa-wand-magic-sparkles"></i> Retreats</li>
+                    <li><i class="fa-solid fa-book-open-reader"></i> Workshops</li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>CONTACT</h4>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span><b>Address:</b> Room No: 308, Aishwarya Heaven, Usarli Khurd, Navi Mumbai – 410221</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span><b>Phone:</b> 7777001185</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span><b>Email:</b> kribuddhawellnesscenter@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kribuddha Wellness | All Rights Reserved</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+    </footer>
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Footer (FIXED ALIGNMENT & BULLETS) --- */
+.footer { background: var(--footer-bg); color: #fff; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+
+.footer-logo-container { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.footer-logo-container img { height: 50px; width: 50px; background: #fff; border-radius: 50%; padding: 5px; }
+.footer-logo-container h3 { color: var(--primary-light); font-size: 1.5rem; }
+
+.footer-col h4 { margin-bottom: 25px; font-size: 16px; letter-spacing: 1px; color: #fff; }
+.footer-col ul { list-style: none !important; padding: 0; }
+.footer-col ul li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #ddd; font-size: 14px; }
+.footer-col ul li i { color: var(--primary-light); width: 20px; text-align: center; }
+
+.contact-col p { display: flex; gap: 10px; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
+.contact-col i { color: var(--primary-light); margin-top: 5px; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { font-size: 18px; cursor: pointer; transition: 0.3s; }
+.social-icons i:hover { color: var(--primary-light); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 30px; text-align: center; color: #999; font-size: 13px; }
+.footer-bottom a { color: #999; text-decoration: none; margin: 0 10px; } 

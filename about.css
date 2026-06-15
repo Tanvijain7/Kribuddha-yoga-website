@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+      --primary: #9b7653;
+    --primary-light: #c5a47e;
+    --text-dark: #444;
+    --footer-bg: #2b1b12;
+}
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 0;
+}
+.nav-container { 
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, buttons right */
+    align-items: center;
+    max-width: 1400px; /* Adjust to match your image width */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo-side { 
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex: 1;
+}
+.logo-side img { height: 50px; }
+.brand-name { font-weight: 600; color: var(--primary); font-size: 1.2rem; }
+.menu-toggle, .hamburger { 
+    display: none !important; 
+}
+.nav-links { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 2; 
+}
+.dropdown {
+    position: relative; /* This is the anchor for the dropdown box */
+}
+.nav-links a { text-decoration: none;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    transition: 0.3s; 
+    padding: 10px 5px; 
+}
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Sits exactly below 'Training' */
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* The shadow from your image */
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    color: #444;
+    padding: 10px 20px;
+    display: block; /* Makes them stack vertically */
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the box when hovering over 'Training' */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #9b7653;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); font-weight: 600; }
+
+.nav-btns { 
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    flex: 1; }
+.btn-trial, .btn-shop { 
+    background: #9b7653; /* The brown color from your image */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-shop {
+    background: #a68564; /* Slightly different shade for shop if you prefer */
+}
+
+    .menu-toggle, .hamburger {
+    display: none !important;
+}
+
+/* About Hero Fix */
+.program-hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.program-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2), rgba(0,0,0,0.6)), 
+                url('about.jpg') center/cover;
+    z-index: 0;
+}
+
+.floating-bg-text {
+   position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: 'Times New Roman',  serif;
+    font-size: 14vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform:translate(-50%, -50%); }
+    50% { transform: translate(-50%, -65%); }
+}
+
+.program-hero-content { position: relative; z-index: 2; text-align: center; color: #fff; }
+.program-hero-content h1 { font-size: 52px; margin-bottom: 10px; font-weight: 700; }
+
+.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 4; }
+.hero-wave svg { width: 100%; height: 100px; fill: #fff; }
+
+/* --- About Section Refining --- */
+.about { 
+    padding: 80px 0; 
+    background: #fff; 
+}
+
+.about-flex { 
+    display: flex; 
+    align-items: center; 
+    gap: 60px; /* Increased gap for a cleaner feel */
+}
+
+.about-img { 
+    flex: 1; 
+}
+
+.about-img img { 
+    width: 100%; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft shadow like the image */
+}
+
+.about-text { 
+    flex: 1; 
+}
+
+.about-text h2 { 
+    font-size: 36px; 
+    color: var(--primary); 
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.about-text .description {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.about-text .tagline {
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.about-list { 
+    list-style: none; 
+}
+
+.about-list li { 
+    margin-bottom: 15px; 
+    font-size: 1rem;
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    color: #666; /* Text is a bit lighter than the icon */
+}
+
+.about-list li i { 
+    color: var(--primary); /* Icons are the signature brown */
+    font-size: 1.1rem;
+    width: 25px; /* Keeps icons aligned even if they have different widths */
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* --- Mission & Vision Section --- */
+.mission-vision {
+    padding: 80px 0;
+    background-color: #fdfbf9; /* Subtle cream background to make white cards pop */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+/* The underline under the title */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0.3;
+}
+
+.mv-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mv-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The "Scooped" Header Design */
+.mv-header {
+    background: var(--primary);
+    padding: 20px;
+    transition: all 0.4s ease;
+    /* This creates the inner curve look */
+    border-radius: 0 0 50px 50px; 
+    margin: 0 15px;
+}
+
+.mv-header h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.mv-body {
+    padding: 40px 30px;
+    text-align: center;
+    line-height: 1.7;
+    color: #666;
+}
+
+.mv-body strong {
+    color: #333;
+}
+
+/* --- The Hover Effects (Color Swapping) --- */
+
+/* Mission Card Hover: Background becomes brown, Header becomes white */
+.mv-card.mission:hover {
+    background: var(--primary);
+    transform: translateY(-10px);
+}
+
+.mv-card.mission:hover .mv-header {
+    background: #fff;
+}
+
+.mv-card.mission:hover .mv-header h3 {
+    color: var(--primary);
+}
+
+.mv-card.mission:hover .mv-body, 
+.mv-card.mission:hover .mv-body strong {
+    color: #fff;
+}
+
+/* Vision Card Hover: Stays white but header darkens or pops */
+.mv-card.vision:hover {
+    background: var(--primary);
+    transform: translateY(-10px);
+}
+.mv-card.vision:hover .mv-header {
+    background: #fff;
+}
+.mv-card.vision:hover .mv-header h3 {
+    color: var(--primary);
+}
+.mv-card.vision:hover .mv-body, 
+.mv-card.vision:hover .mv-body strong {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mv-grid {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+}
+
+/* --- Our Philosophy (White Cards) --- */
+.philosophy {
+    padding: 80px 0;
+    background-color: #fdfbf9; /* Matches the cream bg in image */
+    text-align: center;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.phil-card {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Very soft shadow */
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.phil-card i {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.phil-card h3 {
+    font-size: 25px;
+    color: #9b7653; /* Primary Brown */
+    margin-bottom: 15px;
+}
+
+.phil-card p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hover effect for Philosophy Cards */
+.phil-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(155, 118, 83, 0.1);
+}
+
+/* --- Why Choose Us (Minimalist) --- */
+.why-choose {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.choose-item {
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.choose-item i {
+    font-size: 35px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.choose-item h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.choose-item p {
+    font-size: 20px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Hover for Why Choose Us: Scale up icon and darken text */
+.choose-item:hover i {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.choose-item:hover h3 {
+    color: var(--primary);
+}
+
+/* Shared Section Title Underline */
+.section-title {
+    font-size: 42px;
+    color: var(--primary);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 130px;
+    
+    height: 4px;
+    opacity:0.6;
+    background: var(--primary);
+    margin: 10px auto 0;
+}
+/* --- Founder Section --- */
+.founder-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.founder-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* The Oval Image Frame */
+.founder-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    width: 350px;
+    height: 480px;
+    border-radius: 200px; /* This creates the oval shape */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Styling */
+.founder-content {
+    flex: 1.5;
+}
+
+/* Aligning the colorful underline to the left for this section */
+.section-title.left-align {
+    text-align: left;
+    display: block;
+}
+
+.section-title.left-align::after {
+    left: 0;
+    transform: none;
+    width: 120px; /* Longer line as requested */
+}
+
+.founder-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-top: 30px;
+}
+
+.founder-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 25px 0 15px;
+}
+
+/* Expertise List with Check Icons */
+.expertise-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #555;
+}
+
+.expertise-list li i {
+    color: var(--primary); /* Brown color for checkmarks */
+    margin-top: 4px;
+}
+
+/* The Quote Box with Left Border */
+.quote-box {
+    background-color: #fdf5ec; /* Soft cream background */
+    padding: 20px 25px;
+    border-left: 7px solid var(--primary); /* Thick brown left line */
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    font-size: 20px;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 25px;
+    display: block;
+    max-width: 85%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .founder-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-title.left-align {
+        text-align: center;
+    }
+    .section-title.left-align::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .expertise-list li {
+        justify-content: center;
+    }
+}
+/* --- Partnerships Section --- */
+.partnerships {
+    padding: 80px 0;
+    background-color: #fdfbf9; /* Light cream background */
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.partner-card {
+    background: #fff;
+    flex: 1;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* Soft premium shadow */
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.partner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Specific styling for the circular portrait image */
+.circle-img img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.partner-card h3 {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.since-text {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.affiliation {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 60px; /* Keeps cards aligned */
+}
+
+/* Bullet list with custom brown checkmarks */
+.partner-bullets {
+    list-style: none;
+    text-align: left;
+    display: inline-block; /* Centers the list block */
+}
+
+.partner-bullets li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.partner-bullets li i {
+    color: var(--primary); /* The brand brown */
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .partners-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+.footer { background: #3a2e25; color: #fff; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+
+.footer-logo-container { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.footer-logo-container img { height: 50px; width: 50px; background: #fff; border-radius: 50%; padding: 5px; }
+.footer-logo-container h3 { color: var(--primary-light); font-size: 1.5rem; }
+
+.footer-col h4 { margin-bottom: 25px; font-size: 16px; letter-spacing: 1px; color: #fff; }
+.footer-col ul { list-style: none !important; padding: 0; }
+.footer-col ul li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #ddd; font-size: 14px; }
+.footer-col ul li i { color: var(--primary-light); width: 20px; text-align: center; }
+
+.contact-col p { display: flex; gap: 10px; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
+.contact-col i { color: var(--primary-light); margin-top: 5px; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { font-size: 18px; cursor: pointer; transition: 0.3s; }
+.social-icons i:hover { color: var(--primary-light); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 30px; text-align: center; color: #999; font-size: 13px; }
+.footer-bottom a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+
+
+/* --- RESPONSIVE MEDIA QUERIES FOR ABOUT PAGE --- */
+
+/* 1. Navbar Mobile Logic (Checkbox Hack) */
+@media (max-width: 992px) {
+    .hamburger {
+        display: block !important;
+        font-size: 24px;
+        color: var(--primary);
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        gap: 15px !important;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 2. Tablets & Small Desktops (max-width: 992px) */
+@media (max-width: 992px) {
+    .about-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .floating-bg-text {
+        font-size: 20vw;
+    }
+
+    .mv-grid {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .image-frame {
+        width: 280px; /* Shrinking the oval slightly */
+        height: 380px;
+    }
+}
+
+/* 3. Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Sections Padding */
+    .about, .mission-vision, .philosophy, .why-choose, .founder-section, .partnerships {
+        padding: 60px 0;
+    }
+
+    /* Hero Text */
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Stacking Flex Containers */
+    .about-flex, .founder-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Founder Section Adjustments */
+    .section-title.left-align {
+        text-align: center;
+    }
+    .section-title.left-align::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .expertise-list li {
+        justify-content: center;
+        text-align: left; /* Keeps text readable but centered in block */
+    }
+    .quote-box {
+        max-width: 100%;
+        margin: 25px auto;
+    }
+
+    /* Stacking Grids to 1 Column */
+    .mv-grid, .philosophy-grid, .choose-grid, .partners-grid {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mv-card, .partner-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Footer Mobile */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logo-container, .social-icons {
+        justify-content: center;
+    }
+    .footer-col ul li, .contact-item {
+        justify-content: center;
+    }
+}
+
+/* 4. Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-hero-content h1 {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .image-frame {
+        width: 220px;
+        height: 300px;
+    }
+    .floating-bg-text {
+        display: none; /* Hide background text on very small screens to avoid clutter */
+    }
+}
+
+/* Hidden elements helper */
+.menu-toggle { display: none; }
+.hamburger { display: none; }

@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #9b7653;
+    --primary-light: #c5a47e;
+    --text-dark: #444;
+    --footer-bg: #2b1b12;
+}
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: #fff;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 0;
+}
+.nav-container { 
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, buttons right */
+    align-items: center;
+    max-width: 1400px; /* Adjust to match your image width */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo-side { 
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex: 1;
+}
+.logo-side img { height: 50px; }
+.brand-name { font-weight: 600; color: var(--primary); font-size: 1.2rem; }
+.menu-toggle, .hamburger { 
+    display: none !important; 
+}
+.nav-links { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 2; 
+}
+.dropdown {
+    position: relative; /* This is the anchor for the dropdown box */
+}
+.nav-links a { text-decoration: none;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    transition: 0.3s; 
+    padding: 10px 5px; 
+}
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Sits exactly below 'Training' */
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* The shadow from your image */
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    color: #444;
+    padding: 10px 20px;
+    display: block; /* Makes them stack vertically */
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the box when hovering over 'Training' */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #9b7653;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); font-weight: 600; }
+
+.nav-btns { 
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    flex: 1; }
+.btn-trial, .btn-shop { 
+    background: #9b7653; /* The brown color from your image */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-shop {
+    background: #a68564; /* Slightly different shade for shop if you prefer */
+}
+
+    .menu-toggle, .hamburger {
+    display: none !important;
+}
+
+/* --- Program Hero --- */
+.program-hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.program-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                url('our-wellness.jpg') center/cover;
+    z-index: 1;
+}
+
+.floating-bg-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 15vw;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+    animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.program-hero-content { position: relative; z-index: 3; text-align: center; color: #fff; }
+.program-hero-content h1 { font-size: 52px; margin-bottom: 10px; }
+
+.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 4; }
+.hero-wave svg { width: 100%; height: 100px; fill: #fff; }
+
+
+.products {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+.container {
+    max-width: 1400px; /* Increased from 1200px */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #9b7653;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Centered Underline */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* Adjust width as needed */
+    height: 3px;
+    background-color: #e0c9b0;
+}
+
+
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 25px;
+    
+}
+
+.products-card {
+    background: #ffffff;
+    padding: 40px 25px;
+    
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+    transition: transform 0.3s ease;
+    border: 1px solid #f4f4f4;
+}
+
+.products-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.products-icon {
+    font-size: 35px;
+    color: #9b7653; /* Your signature brown */
+    margin-bottom: 20px;
+}
+
+.products-card h3 {
+    font-size: 21px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.products-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.btn { 
+    background: #9b7653; 
+    font-size: 14px;
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    margin-top: auto;
+    display: inline-block; 
+    font-weight: 500; 
+}
+
+
+.choose {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+.container {
+    max-width: 1400px; /* Increased from 1200px */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #9b7653;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* Centered Underline */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* Adjust width as needed */
+    height: 3px;
+    background-color: #e0c9b0;
+}
+
+.choose-subtext {
+    margin-top: 15px;
+    color: #666;
+    font-weight: 300;
+}
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 25px;
+    
+}
+
+.choose-card {
+    background: #fff;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+    transition: transform 0.3s ease;
+    border: 1px solid #f4f4f4;
+}
+
+.choose-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.choose-icon {
+    font-size: 35px;
+    color: #9b7653; /* Your signature brown */
+    margin-bottom: 20px;
+}
+
+.choose-card h3 {
+    font-size: 21px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.choose-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+
+
+.banner {
+    height: 400px;
+    background: #4630228C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.banner-overlay h2{
+    font:24px;
+    color:#ffffff;
+    margin:0 0 8px;
+
+}
+.banner-overlay p{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0 0 24px;
+}
+.btn-white { background: #fff; color: #333; padding: 12px 30px; border-radius: 5px; text-decoration: none; margin-top: 20px; display: inline-block; font-weight: 500; }
+
+
+.footer { background: #3a2e25; color: #fff; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+
+.footer-logo-container { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.footer-logo-container img { height: 50px; width: 50px; background: #fff; border-radius: 50%; padding: 5px; }
+.footer-logo-container h3 { color: var(--primary-light); font-size: 1.5rem; }
+
+.footer-col h4 { margin-bottom: 25px; font-size: 16px; letter-spacing: 1px; color: #fff; }
+.footer-col ul { list-style: none !important; padding: 0; }
+.footer-col ul li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #ddd; font-size: 14px; }
+.footer-col ul li i { color: var(--primary-light); width: 20px; text-align: center; }
+
+.contact-col p { display: flex; gap: 10px; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
+.contact-col i { color: var(--primary-light); margin-top: 5px; }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { font-size: 18px; cursor: pointer; transition: 0.3s; }
+.social-icons i:hover { color: var(--primary-light); }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 30px; text-align: center; color: #999; font-size: 13px; }
+.footer-bottom a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+/* --- COMPLETE RESPONSIVE SHOP PAGE --- */
+
+@media (max-width: 992px) {
+   .navbar {
+        position: sticky;
+        top:0;
+        width:100%;
+        background: #fff;
+        z-index: 1000;
+        height: 70px;
+        
+    }
+    .nav-container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+    /* 1. Show the Hamburger Icon */
+    .hamburger {
+        display: block !important;
+        cursor: pointer;
+        font-size: 26px;
+        color: #9b7653;
+        z-index: 1001;
+    }
+
+   
+
+    /* 3. Transform Nav Links into Mobile Menu */
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column !important;
+        position: fixed !important; /* Changes from absolute to fixed */
+        top: 70px; /* Must match the navbar height */
+        left: 0;
+        width: 100vw !important; /* Full screen width */
+        height: calc(100vh - 70px); /* Full screen height minus header */
+        background: #ffffff !important;
+        overflow-y: auto; /* Allow scrolling inside menu if it's long */
+        z-index: 9999 !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+    }
+ /* 2. Hide Checkbox but keep it functional */
+    .menu-toggle {
+        display: none !important;
+    }
+    /* 4. THE MAGIC: This shows the menu options when hamburger is clicked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex !important;
+    }
+    .nav-links a {
+        width: 100% !important;
+        padding: 18px 30px !important;
+        font-size: 16px !important;
+        border-bottom: 1px solid #f5f5f5;
+        color: #444 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start !important;
+    }
+
+    /* 5. Handle Buttons inside Menu */
+    .nav-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+        gap: 15px !important;
+        width: 100% !important;
+        
+    }
+    
+     .btn-trial, .btn-shop {
+        width: 100% !important;
+        height: 50px;
+        justify-content: center !important;
+        font-size: 16px !important;
+    }
+
+    /* 6. Dropdown (Training) on Mobile */
+    .dropdown-content {
+        position: static !important;
+        display: none; 
+        background: #fcfaf8;
+        width: 100% !important;
+        padding-left: 40px !important;
+        box-shadow: none !important;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block !important;
+    }
+
+    /* 7. Adjust Grids for Tablet (2 columns) */
+    .products-grid, .choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Hero Adjustments */
+    .program-hero {
+        height: 50vh;
+    }
+    .program-hero-content h1 {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+    .floating-bg-text {
+        font-size: 25vw; /* Large background text scales down */
+    }
+    .hero-wave svg {
+        height: 40px;
+    }
+
+    /* 2. Shop & Choose Grids (1 column for Phones) */
+    .products-grid, .choose-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .section-header h2 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* 3. Banner & Footer */
+    .banner {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-logo-container, 
+    .social-icons, 
+    .footer-col ul li,
+    .contact-item {
+        justify-content: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
